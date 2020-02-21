@@ -3,7 +3,7 @@ class Sorter:
     def __init__(self, _list):
         self._list = _list
 
-    def runSelectionSortIter(self):
+    def runSelectionSortIteratively(self):
         startIndexOfUnsortedList = 0
         for x in range(startIndexOfUnsortedList, len(self._list)):
             smallestVal = self._list[x]
@@ -19,4 +19,9 @@ class Sorter:
                 self._list[x] = smallestVal
                 self._list[smallestValIndex] = tempValue
             startIndexOfUnsortedList += 1
+        return self._list
+
+    def runSelectionSortRecursively(self):
+        smallestVal = self._list[0]
+
         return self._list
